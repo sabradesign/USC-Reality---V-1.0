@@ -1,0 +1,26 @@
+/*
+Theme Name:     USC Reality
+Theme URI:      http://sabradesign.me
+Description:    Official theme of the Reality Committee.
+Author:         USC Interactive Media Department and Sabra Design
+Author URI:     http://sabradesign.me
+Template:       bp-default
+Version:        0.1.1
+*/
+
+/*****************************************************************************************
+********************************* CUSTOM FONTS *******************************************
+*****************************************************************************************/
+
+@font-face{ 
+	font-family: 'JeanLuc';
+	src: url('fonts/jeanluc-bold-webfont.eot');
+	src: url('fonts/jeanluc-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/jeanluc-bold-webfont.woff') format('woff'),
+	     url('fonts/jeanluc-bold-webfont.ttf') format('truetype'),
+	     url('fonts/jeanluc-bold-webfont.svg#webfont') format('svg');
+}
+
+/*****************************************************************************************
+********************************* ACTIVITY CSS *******************************************
+*****************************************************************************************/

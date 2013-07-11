@@ -1,0 +1,90 @@
+/*
+
+CUSTOM LOGIN FORM CSS
+Author:  Sabra Design
+Last Updated:	12/11/12
+Description:	This css file will allow you to customize the login form of your WP install.
+
+INSTALLATION INSTRUCTIONS
+
+1) Create "admin" folder in your theme folder 
+2. Add this file to the folder "admin" of your theme folder
+3)	Add the background file and client logo (with width ~ 326px) into the "images" folder of your theme folder
+4)  Add the following lines of code to your "functions.php" file
+
+function custom_login_css() { 
+	echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/admin/login.css" />'; 
+}
+add_action('login_head', 'custom_login_css');
+
+*/
+
+/* ADD BODY BACKGROUND */
+body.login {
+	background: rgb(51,51,51); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(51,51,51,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+/* ADD CLIENT LOGO AND IMAGE DIMENSIONS */
+.login h1 a {
+	background-image: url('../images/reality-logo_326x326.png');
+	background-size: auto;
+	background-position: top center;
+	background-repeat: no-repeat;
+	width: 326px;
+	height: 326px;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding-bottom: 15px;
+	display: block;
+}
+
+body.login #nav a, body.login #backtoblog a {
+	color: #99bf5c !important;
+	text-shadow: none;
+}
+
+body.login #nav a:hover, body.login #backtoblog a:hover {
+	color: #d63f74 !important;
+}
+
+.wp-core-ui .button-primary {
+	background-color: #222222;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#222222),to(#333333));
+	background-image: -webkit-linear-gradient(top,#222222,#333333);
+	background-image: -moz-linear-gradient(top,#222222,#333333);
+	background-image: -ms-linear-gradient(top,#222222,#333333);
+	background-image: -o-linear-gradient(top,#222222,#333333);
+	background-image: linear-gradient(to bottom,#222222,#333333);
+	border-color: #333333;
+	border-bottom-color: #222222;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120,200,230,0.5);
+	box-shadow: inset 0 1px 0 rgba(120,200,230,0.5);
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.wp-core-ui .button-primary:hover {
+	background-color: #d63f74;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#d63f74),to(#D66087));
+	background-image: -webkit-linear-gradient(top,#d63f74,#D66087);
+	background-image: -moz-linear-gradient(top,#d63f74,#D66087);
+	background-image: -ms-linear-gradient(top,#d63f74,#D66087);
+	background-image: -o-linear-gradient(top,#d63f74,#D66087);
+	background-image: linear-gradient(to bottom,#d63f74,#D66087);
+	border-color: #D66087;
+	border-bottom-color: #d63f74;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120,200,230,0.5);
+	box-shadow: inset 0 1px 0 rgba(120,200,230,0.5);
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}

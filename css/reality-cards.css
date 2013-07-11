@@ -1,0 +1,411 @@
+/*
+ * CSS STYLING FOR REALITY CARDS
+ * For use on both Front-End and Back-End
+ */
+ 
+.reality-card {
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+	width: 310px;
+	display: inline-block;
+	color: black;
+}
+
+.reality-card .no-card {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border: 10px solid #666;
+	background: #222;
+	padding-top: 20%;
+	font-size: 2em;
+	font-weight: bold;
+	color: #666;
+	border-radius: 20px;
+	background-image: url(../images/reality-icon.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.reality-card.large {
+	width: 310px;
+	font-size: 13px;
+}
+
+.reality-card.medium {
+	width: 160px;
+	font-size: 7px;
+	border-radius: 8px;
+}
+
+.reality-card.small {
+	width: 75px;
+	border-radius: 2px;
+	font-size: 3px;
+}
+ 
+.reality-card .reality-card-background,
+.reality-card .reality-card-background div {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-size: 100%;
+}
+
+.reality-card.front .reality-card-background div,
+.reality-card.front .reality-card-background div.maker {
+	background-image: url(../images/card_templates/B_MAKER-TEMPLATE.png);
+}
+
+.reality-card.back .reality-card-background div,
+.reality-card.back .reality-card-background div.maker {
+	background-image: url(../images/card_templates/maker_back.jpg);
+} 
+
+.reality-card.front .reality-card-background div.property {
+	background-image: url(../images/card_templates/B_PROPERTY_TEMPLATE.png);
+}
+
+.reality-card.back .reality-card-background div.property {
+	background-image: url(../images/card_templates/property_back.jpg);
+} 
+
+.reality-card.front .reality-card-background div.player {
+	background-image: url(../images/card_templates/player_front.jpg);
+}
+
+.reality-card.back .reality-card-background div.player {
+	background-image: url(../images/card_templates/utility_back.jpg);
+}
+
+.reality-card.front .reality-card-background div.special {
+	background-image: url(../images/card_templates/B_SPECIAL-TEMPLATE.png);
+}
+
+.reality-card.back .reality-card-background div.special {
+	background-image: url(../images/card_templates/special_back.jpg);
+} 
+
+.reality-card.front .reality-card-background div.utility {
+	background-image: url(../images/card_templates/utility_front.jpg);
+}
+
+.reality-card.back .reality-card-background div.utility {
+	background-image: url(../images/card_templates/utility_back.jpg);
+} 
+
+.reality-card .aspect-control {
+	width: 100%;
+	padding-top: 140%;
+}
+
+.reality-card .reality-card-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 100%;
+}
+
+/* CONNECTIONS */
+
+.reality-card .reality-card-container .reality-card-connections,
+.reality-card .reality-card-container .reality-card-connections div {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-size: 100%;
+}
+
+/* MAKER CARDS */
+
+.reality-card .reality-card-container.maker .reality-card-connections div {
+	background-image: url(../images/card_templates/F_MAKER-TEMPLATE-CONN.png) !important;
+}
+
+/* SPECIAL CARDS */
+
+.reality-card .reality-card-container.special .reality-card-connections div {
+	background-image: url(../images/card_templates/F_SPECIAL-TEMPLATE.png) !important;
+}
+
+/* PLAYER CARDS */
+
+.reality-card .reality-card-container.player .reality-card-connections div {
+	background: transparent !important;
+}
+
+.reality-card .reality-card-container .reality-card-connections div.zero_out {
+	background-image: url(../images/card_templates/F_PROPERTY_0_TEMPLATE-CONN.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.one_out_bottom {
+	background-image: url(../images/card_templates/F_PROPERTY_1OUT_B_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.one_out_bottom_special {
+	background-image: url(../images/card_templates/F_PROPERTY_1OUT_B_SP_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.one_out_left {
+	background-image: url(../images/card_templates/F_PROPERTY_1OUT_L_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.one_out_right {
+	background-image: url(../images/card_templates/F_PROPERTY_1OUT_R_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.two_out_left {
+	background-image: url(../images/card_templates/F_PROPERTY_2OUT_L_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.two_out_left_special {
+	background-image: url(../images/card_templates/F_PROPERTY_2OUT_L_SP_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.two_out_right {
+	background-image: url(../images/card_templates/F_PROPERTY_2OUT_R_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.two_out_right_special {
+	background-image: url(../images/card_templates/F_PROPERTY_2OUT_R_SP_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.three_out {
+	background-image: url(../images/card_templates/F_PROPERTY_3OUT_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.three_out_special {
+	background-image: url(../images/card_templates/F_PROPERTY_3OUT_S_TEMPLATE.png);
+}
+
+.reality-card .reality-card-container .reality-card-connections div.wildcard {
+	background-image: url(../images/card_templates/F_PROPERTY_WILDCARD.png);
+}
+
+.reality-card .reality-card-container .REALITY_card_front_description {
+	width: 50%;
+	margin: 0 25%;
+	text-align: center;
+	position: absolute;
+	top: 20%;
+	font-style: italic;
+	line-height: 1.5em;
+}
+
+.reality-card.large .reality-card-container .REALITY_card_front_description {
+	font-size: .8em;
+}
+
+.reality-card.medium .reality-card-container .REALITY_card_front_description {
+	font-size: 5px;
+}
+
+.reality-card.small .reality-card-container .REALITY_card_front_description {
+	font-size: 2px;
+}
+
+.reality-card .reality-card-container .REALITY_card_front_title_secondline {
+	width: 70%;
+	margin: 0% 15% 0 15%;
+	text-align: center;
+	font-size: 2.5em;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-family: 'JeanLuc', 'Arial', san-serif;
+}
+
+
+.reality-card .reality-card-container .REALITY_card_front_title_firstline {
+	font-size: 2em;
+	color: #777;
+	width: 70%;
+	margin: 60% 15% 0 15%;
+	text-align: center;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-family: 'JeanLuc', 'Arial', san-serif;
+}
+
+.reality-card .reality-card-container .REALITY_card_front_powerup {
+	position: absolute;
+	left: 18%;
+	right: 18%;
+	top: 60%;
+	bottom: 15%;
+	font-family: 'JeanLuc', 'Arial', san-serif;
+	line-height: 1em;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2em;
+}
+
+.reality-card .reality-card-container .REALITY_card_front_id {
+	position: absolute;
+	bottom: 4%;
+	left: 7%;
+}
+
+.reality-card.small .reality-card-container .REALITY_card_front_id {
+	bottom: -4%;
+}
+
+/* CARD VALUES */
+
+.reality-card .reality-card-container .reality-card-front-values {
+	position: absolute;
+	right: 9%;
+	bottom: 8.5%;
+	width: 5%;
+	line-height: 1;
+}
+
+.reality-card .reality-card-container .reality-card-front-values .value {
+	margin-bottom: 19px;
+}
+
+.reality-card.large .reality-card-container .reality-card-front-values {
+	right: 9.95%;
+	font-size: .9em;
+}
+
+.reality-card.medium .reality-card-container .reality-card-front-values {
+	font-size: 6px;
+	right: 9.5%;
+}
+
+.reality-card.medium .reality-card-container .reality-card-front-values .value {
+	margin-bottom: 10px;
+}
+
+.reality-card.small .reality-card-container .reality-card-front-values {
+	right: 10.7%;
+	bottom: 10.4%;
+}
+
+.reality-card.small .reality-card-container .reality-card-front-values .value {
+	margin-bottom: 4px;
+}
+
+/* PLAYER CARD VALUE */
+
+.reality-card .reality-card-container.player .reality-card-front-values {
+	right: auto;
+	bottom: auto;
+	font-weight: bold;
+	font-family: 'JeanLuc', 'Arial', san-serif;
+}
+
+.reality-card.large .reality-card-container.player .reality-card-front-values {
+	font-size: 55px;
+	top: 8.5%;
+	left: 14.5%;
+}
+
+.reality-card.medium .reality-card-container.player .reality-card-front-values {
+	font-size: 30px;
+	top: 8%;
+	left: 14%;
+}
+
+.reality-card.small .reality-card-container.player .reality-card-front-values {
+	font-size: 15px;
+	top: 8%;
+	left: 14%;
+}
+
+.reality-card .reality-card-container.player .reality-card-front-values .value {
+	display: none;
+}
+
+.reality-card .reality-card-container.player .reality-card-front-values .value:first-child {
+	display: block;
+}
+
+.reality-card .reality-card-container.utility .reality-card-front-values,
+.reality-card .reality-card-container.player .REALITY_card_front_description {
+	display: none;
+}
+
+.reality-card .reality-card-container .reality-card-back-ID {
+	display: none;
+}
+
+.reality-card .reality-card-container .REALITY_card_back_title {
+	width: 80%;
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	margin: 20% auto 0;
+	text-transform: uppercase;
+	font-family: 'JeanLuc', 'Arial', san-serif;
+}
+
+.reality-card.back .reality-card-container img {
+	width: 50%;
+	margin: 5% 25%;
+	height: 35.7%;
+}
+
+.reality-card.back .reality-card-container.utility img,
+.reality-card.back .reality-card-container.player img,
+.reality-card .reality-card-container.utility .REALITY_card_back_description,
+.reality-card .reality-card-container.player .REALITY_card_back_description,
+.reality-card .reality-card-container.utility .REALITY_card_back_title,
+.reality-card .reality-card-container.player .REALITY_card_back_title {
+	display: none;
+}
+
+.reality-card .reality-card-container .REALITY_card_back_description {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	color: #ccc;
+	font-size: 1em;
+	font-family: serif;
+}
+
+.reality-card .reality-card-container .REALITY_card_back_setinfo {
+	font-family: serif;
+	font-style: italic;
+	position: absolute;
+	left: -38.5%;
+	width: 100%;
+	color: #999;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	top: 45%;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+/* COLORS */
+
+.reality-card .reality-card-container.property .REALITY_card_front_title_secondline,
+.reality-card .reality-card-container.property .REALITY_card_front_powerup,
+.reality-card .reality-card-container.property .REALITY_card_back_title {
+	color: #d63f74;
+}
+
+.reality-card .reality-card-container.special .REALITY_card_front_title_secondline,
+.reality-card .reality-card-container.special .REALITY_card_front_powerup,
+.reality-card .reality-card-container.special .REALITY_card_back_title {
+	color: #06bbe6;
+}
+
+.reality-card .reality-card-container.maker .REALITY_card_front_powerup,
+.reality-card .reality-card-container.maker .REALITY_card_back_title {
+	color: #99bf5c;
+}	

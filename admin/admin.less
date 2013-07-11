@@ -1,0 +1,89 @@
+/*
+ * CSS STYLING FOR REALITY ADMIN
+ */
+ 
+ .hidden {
+ 	display: none;
+ }
+
+.postbox .reality-card {
+	margin-right: 3%;
+	float: left;
+}
+
+#REALITY_card_front_details .rwmb-field,
+#REALITY_card_back_details .rwmb-field {
+	float: left;
+	width: 47%;
+}
+
+.postbox .rwmb-label {
+	width: auto;
+}
+
+.rwmb-label ~ .rwmb-input {
+	width: 100% !important;
+}
+
+table tr td.setting-name {
+	max-width: 200px;
+	width: 20%;
+}
+
+table.leader-board {
+	width: 100%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	font-family: @secondary;
+	
+	thead {
+		
+		
+		th {
+			font-family: @jean-luc;
+			font-size: 1em;
+			color: black;
+		}
+		
+	}
+	
+	tbody {
+	
+		tr:nth-child(2n) {
+			background: #eee;
+		}
+		
+		td {
+			margin: 0;
+		}
+		
+		tr {
+		
+			td:first-child {
+				font-weight: bold;
+				font-size: 1.5em;
+				padding: .5em 0;
+				width: 15%;
+				text-align: center;
+			}
+			
+			td {
+				padding: 5px 0 5px 10px;
+			}
+			
+			td:last-child {
+				text-align: center;
+				padding: 0 10px;
+				width: 20%;
+			}
+		
+		}
+	
+	}
+	
+	tfoot {
+		text-align: right;
+	}
+	
+	
+}
