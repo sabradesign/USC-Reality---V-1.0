@@ -147,6 +147,8 @@ add_action( 'wp_enqueue_scripts', 'reality_enqueue_scripts', 9);
 
 function reality_enqueue_styles() {
 
+	if ( !is_admin() ) {
+
 		wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
 		wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/js/flexslider/flexslider.css' );
 		wp_enqueue_style( 'flexslider', get_stylesheet_directory_uri() . '/js/fancybox/jquery.fancybox-1.3.4.css' );
@@ -154,6 +156,7 @@ function reality_enqueue_styles() {
 		wp_enqueue_style( 'reality-cards-css', get_stylesheet_directory_uri() . '/css/reality-cards.css', array( 'bp-default-responsive') );
 		wp_enqueue_style( 'custom-less', get_stylesheet_directory_uri() . '/custom.less', array(  'bp-default-responsive', 'reality-cards-css' ) );
 
+	}
 	
 	if ( is_page_template('submission_form.php' ) ) {
 
