@@ -77,7 +77,7 @@
 			<ul class="slides">
 				<?php
 					global $reality;
-					if ( isset($reality->current_dept ) && is_array( $reality->current_dept_deals ) && $reality->current_dept != 'administrator' && $reality->current_dept != 'game-master' ) {
+					if ( isset($reality->current_dept ) && isset( $reality->current_dept_deals ) && is_array( $reality->current_dept_deals ) && !empty( $reality->current_dept_deals ) && $reality->current_dept != 'administrator' && $reality->current_dept != 'game-master' ) {
 						$in = $reality->current_dept_deals;
 					} else {
 						$in = '';

@@ -39,20 +39,20 @@ div.activity-type-tabs {
 
 @font-face{ 
 	font-family: 'JeanLuc';
-	src: url('@{themeurl}/fonts/jeanluc-bold-webfont.eot');
-	src: url('@{themeurl}/fonts/jeanluc-bold-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('@{themeurl}/fonts/jeanluc-bold-webfont.woff') format('woff'),
-	     url('@{themeurl}/fonts/jeanluc-bold-webfont.ttf') format('truetype'),
-	     url('@{themeurl}/fonts/jeanluc-bold-webfont.svg#webfont') format('svg');
+	src: url('@{stylesheet_directory_uri}/fonts/jeanluc-bold-webfont.eot');
+	src: url('@{stylesheet_directory_uri}/fonts/jeanluc-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('@{stylesheet_directory_uri}/fonts/jeanluc-bold-webfont.woff') format('woff'),
+	     url('@{stylesheet_directory_uri}/fonts/jeanluc-bold-webfont.ttf') format('truetype'),
+	     url('@{stylesheet_directory_uri}/fonts/jeanluc-bold-webfont.svg#webfont') format('svg');
 }
 
 @font-face {
     font-family: 'Yanone Kaffeesatz';
-    src: url('@{themeurl}/fonts/yanonekaffeesatz-regular-webfont.eot');
-    src: url('@{themeurl}/fonts/yanonekaffeesatz-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-regular-webfont.woff') format('woff'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-regular-webfont.ttf') format('truetype'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular') format('svg');
+    src: url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-regular-webfont.eot');
+    src: url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-regular-webfont.woff') format('woff'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-regular-webfont.ttf') format('truetype'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -60,11 +60,11 @@ div.activity-type-tabs {
 
 @font-face {
     font-family: 'Yanone Kaffeesatz';
-    src: url('@{themeurl}/fonts/yanonekaffeesatz-bold-webfont.eot');
-    src: url('@{themeurl}/fonts/yanonekaffeesatz-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-bold-webfont.woff') format('woff'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-bold-webfont.ttf') format('truetype'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold') format('svg');
+    src: url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-bold-webfont.eot');
+    src: url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-bold-webfont.woff') format('woff'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-bold-webfont.ttf') format('truetype'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold') format('svg');
     font-weight: bold;
     font-style: normal;
 
@@ -72,11 +72,11 @@ div.activity-type-tabs {
 
 @font-face {
     font-family: 'Yanone Kaffeesatz';
-    src: url('@{themeurl}/fonts/yanonekaffeesatz-light-webfont.eot');
-    src: url('@{themeurl}/fonts/yanonekaffeesatz-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-light-webfont.woff') format('woff'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-light-webfont.ttf') format('truetype'),
-         url('@{themeurl}/fonts/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight') format('svg');
+    src: url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-light-webfont.eot');
+    src: url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-light-webfont.woff') format('woff'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-light-webfont.ttf') format('truetype'),
+         url('@{stylesheet_directory_uri}/fonts/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight') format('svg');
     font-weight: lighter;
     font-style: normal;
 
@@ -272,7 +272,7 @@ a.download-file {
 	cursor: pointer;
 	width: 158px;
 	height: 45px;
-	background-image: url(@{themeurl}/images/download.png);
+	background-image: url(@{stylesheet_directory_uri}/images/download.png);
 	margin: 1em auto;
 }
 
@@ -549,7 +549,7 @@ div.top-bar {
 						display: block;
 						padding: 20px 15px;
 						color: @light-grey;
-						//background-image: url(@{themeurl}/images/current-menu-item.png);
+						//background-image: url(@{stylesheet_directory_uri}/images/current-menu-item.png);
 						background-position: center 55px;
 						background-repeat: no-repeat;
 						.transition( .3s all );
@@ -935,7 +935,7 @@ div.dept_nav {
 	
 	a.loading, a.loading:hover {
 		background-repeat: no-repeat;
-		background-image: url(@{themeurl}/images/ajax-loader.gif);
+		background-image: url(@{stylesheet_directory_uri}/images/ajax-loader.gif);
 		background-position: 10px center;
 		background-color: @dark-grey;
 		border: none;
@@ -1274,7 +1274,7 @@ body.page-template-reality_login-php {
 				position: absolute;
 				margin-top: 50px;
 				padding-top: 300px;
-				background-image: url(@{themeurl}/images/login_bg.png);
+				background-image: url(@{stylesheet_directory_uri}/images/login_bg.png);
 				background-position: top center;
 				background-repeat: no-repeat;
 				background-size: 100%;
@@ -1462,7 +1462,7 @@ body form#whats-new-form {
 				bottom: 0;
 				right: 0;
 				content: ' ';
-				background-image: url(@{themeurl}/images/photo_icon.png);
+				background-image: url(@{stylesheet_directory_uri}/images/photo_icon.png);
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-color: @red;
@@ -1508,7 +1508,7 @@ body form#whats-new-form {
 					//bottom: 0;
 					//right: 0;
 					//content: ' ';
-					//background-image: url(@{themeurl}/images/photo_icon.png);
+					//background-image: url(@{stylesheet_directory_uri}/images/photo_icon.png);
 					//background-position: center center;
 					//background-repeat: no-repeat;
 					//background-color: @red;
@@ -1695,7 +1695,7 @@ ul#activity-stream {
 				
 				a.acomment-reply {
 				
-					//background-image: url(@{themeurl}/images/reply-button.png);
+					//background-image: url(@{stylesheet_directory_uri}/images/reply-button.png);
 					background: @dark-grey;
 					border: 0;
 					padding: 0;
@@ -2038,7 +2038,7 @@ body div.activity-comments {
 			
 		li {
 					
-			background: url(@{themeurl}/images/bg-lines.png);
+			background: url(@{stylesheet_directory_uri}/images/bg-lines.png);
 			border-bottom: 0px;
 			border-top: 0px;
 			margin-bottom: 10px;
@@ -2100,7 +2100,7 @@ body div.activity-comments {
 				
 				a.comment-reply-link {
 				
-					background-image: url(@{themeurl}/images/reply-button.png);
+					background-image: url(@{stylesheet_directory_uri}/images/reply-button.png);
 					border: 0;
 					padding: 0;
 					width: 134px;
@@ -2249,7 +2249,7 @@ ul#members-list {
 	
 		li {
 		
-			background-image: url(@{themeurl}/images/bg-lines.png);
+			background-image: url(@{stylesheet_directory_uri}/images/bg-lines.png);
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: 100%;
@@ -2430,7 +2430,7 @@ body.bp-user {
 			
 			div#item-header-content {
 			
-				background-image: url(@{themeurl}/images/bg-lines.png);
+				background-image: url(@{stylesheet_directory_uri}/images/bg-lines.png);
 				background-repeat: no-repeat;
 				background-position: center center;
 				background-color: @dark-grey;
@@ -2743,7 +2743,7 @@ ul.reality-awards {
 						margin: 1em 1%;
 						display: block;
 						height: 100px;
-						background-image: url(@{themeurl}/images/laurel.png);
+						background-image: url(@{stylesheet_directory_uri}/images/laurel.png);
 						background-repeat: no-repeat;
 						background-position: center;
 						background-size: 100%;
@@ -2844,7 +2844,7 @@ body table.user-quick-status {
 		float: left;
 		width: 31.33333%;
 		margin: 1em 1%;
-		background-image: url(@{themeurl}/images/bg-lines.png);
+		background-image: url(@{stylesheet_directory_uri}/images/bg-lines.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 100%;
@@ -2939,7 +2939,7 @@ body.single {
 	}
 	
 	#deal-header {
-		background-image: url(@{themeurl}/images/bg-lines.png);
+		background-image: url(@{stylesheet_directory_uri}/images/bg-lines.png);
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-color: #222;

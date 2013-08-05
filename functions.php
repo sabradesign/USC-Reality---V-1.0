@@ -5,7 +5,6 @@
  */
 require_once dirname( __FILE__ ) . '/admin/class-tgm-plugin-activation.php';
 require_once( 'admin/theme_init.php' );
-require_once( 'admin/wp-less.php' );
 
 require_once( 'admin/reality-class.php' );
 
@@ -30,6 +29,13 @@ function uscreality_register_required_plugins() {
 		array(
 			'name' 		=> 'BuddyPress',
 			'slug' 		=> 'buddypress',
+			'required' 	=> true,
+			'force_activation' 		=> true, 
+			'force_deactivation' 	=> false
+		),
+		array(
+			'name' 		=> 'WP-Less',
+			'slug' 		=> 'wp-less',
 			'required' 	=> true,
 			'force_activation' 		=> true, 
 			'force_deactivation' 	=> false
@@ -101,14 +107,6 @@ function reality_enqueue_scripts() {
 
 		//$translation_array = array( 'env' => 'development', 'async' => false, 'fileAsync' => false, 'poll' => 5000, 'dumpLineNumbers' => "comments", 'relativeUrls' => false );
 		//wp_localize_script( 'lessJS', 'less', $translation_array );
-
-		wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
-		wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/js/flexslider/flexslider.css' );
-		wp_enqueue_style( 'flexslider', get_stylesheet_directory_uri() . '/js/fancybox/jquery.fancybox-1.3.4.css' );
-		wp_enqueue_style( 'less-css', get_stylesheet_directory_uri() . '/css/styles.less', array( 'uscreality', 'bp-default-responsive' ) );
-		wp_enqueue_style( 'reality-cards-css', get_stylesheet_directory_uri() . '/css/reality-cards.css', array( 'uscreality', 'bp-default-responsive') );
-		wp_enqueue_style( 'custom-less', get_stylesheet_directory_uri() . '/custom.less', array( 'uscreality', 'bp-default-responsive', 'reality-cards-css' ) );
-	
 	}
 	
 	if ( is_page_template('submission_form.php' ) ) {
@@ -135,7 +133,6 @@ function reality_enqueue_scripts() {
 			) );
 			
 			//wp_enqueue_script( 'jquery-ui-menu', get_stylesheet_directory_uri() . '/js/jquery-ui/jquery.ui.menu.js', array( 'jquery-ui-core' ) );
-			wp_enqueue_style( 'jquery-ui-menu', get_stylesheet_directory_uri() . '/js/jquery-ui/jquery.ui.menu.css' );
 			wp_enqueue_script( 'jquery-ui-autocomplete' );
 	}
 	
@@ -147,6 +144,23 @@ function reality_enqueue_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'reality_enqueue_scripts', 9);
+
+function reality_enqueue_styles() {
+
+		wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
+		wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/js/flexslider/flexslider.css' );
+		wp_enqueue_style( 'flexslider', get_stylesheet_directory_uri() . '/js/fancybox/jquery.fancybox-1.3.4.css' );
+		wp_enqueue_style( 'less-css', get_stylesheet_directory_uri() . '/css/styles.less', array( 'bp-default-responsive' ) );
+		wp_enqueue_style( 'reality-cards-css', get_stylesheet_directory_uri() . '/css/reality-cards.css', array( 'bp-default-responsive') );
+		wp_enqueue_style( 'custom-less', get_stylesheet_directory_uri() . '/custom.less', array(  'bp-default-responsive', 'reality-cards-css' ) );
+
+	
+	if ( is_page_template('submission_form.php' ) ) {
+
+			wp_enqueue_style( 'jquery-ui-menu', get_stylesheet_directory_uri() . '/js/jquery-ui/jquery.ui.menu.css' );
+	}
+}
+add_action( 'init', 'reality_enqueue_styles');
 
 //BUDDYPRESS ALTERATIONS
 
