@@ -190,6 +190,16 @@ function reality_enqueue_admin_scripts() {
 	wp_enqueue_style( 'jquery-ui', 'http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css' );
 	wp_enqueue_style( 'reality-admin-css', get_stylesheet_directory_uri() . '/admin/admin.less');
 	wp_enqueue_style( 'reality-cards-css', get_stylesheet_directory_uri() . '/css/reality-cards.css');
+	
+	if (class_exists('WPLessPlugin')){
+	
+		$less = WPLessPlugin::getInstance();
+
+		// do stuff with its API like:
+		$less->processStylesheets();
+	
+	}
+	
 }
 add_action( 'admin_init', 'reality_enqueue_admin_scripts' );
 
