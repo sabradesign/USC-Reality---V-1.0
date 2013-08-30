@@ -199,7 +199,11 @@ function reality_update_user_points( $user_id ) {
  		 
  		$deal_activities = new BP_Activity_Template( $deal_template_args );
 
+	$hasActivities = false;
+
 	if ( $deal_activities->has_activities() ) {
+    	
+    	$hasActivities = true;
     	
     	if ( is_array( $instances ) ) {
     	
@@ -260,30 +264,44 @@ function reality_update_user_points( $user_id ) {
  	
  	if ( is_array( $instances ) ) {
  		
- 		if ( $is_reality_currently_running ) {
-	 		$currentPoints = $points[ $current_slug ];
+ 		if ( $hasActivities ) {
+ 		
+			if ( $is_reality_currently_running ) {
+				$currentPoints = $points[ $current_slug ];
+			} else {
+				$currentPoints = 0;
+			}
+		
+			$currentPoints = apply_filters('reality_calculated_user_points', $currentPoints, $user_id);
+		
+			update_user_meta( $user_id, 'reality_current_points', $currentPoints );
+			unset( $points[ $current_slug ] );
+		
+			// Set scores from past instances
+			update_user_meta( $user_id, 'reality_past_points', $points );
+		
+			// Update weekly scores
+		
+			foreach( $weekly_points as $season => $weeks ) {
+		
+				foreach( $weeks as $week => $points ) {
+			
+					update_user_meta( $user_id, 'reality_weekly_points_'.$season.'_week_'.$week, $points );
+			
+				}
+		
+			}
+ 		
  		} else {
+ 		
  			$currentPoints = 0;
- 		}
- 		
- 		$currentPoints = apply_filters('reality_calculated_user_points', $currentPoints, $user_id);
- 		
- 		update_user_meta( $user_id, 'reality_current_points', $currentPoints );
- 		unset( $points[ $current_slug ] );
- 		
- 		// Set scores from past instances
- 		update_user_meta( $user_id, 'reality_past_points', $points );
- 		
- 		// Update weekly scores
- 		
- 		foreach( $weekly_points as $season => $weeks ) {
- 		
- 			foreach( $weeks as $week => $points ) {
+ 			$currentPoints = apply_filters('reality_calculated_user_points', $currentPoints, $user_id);
  			
- 				update_user_meta( $user_id, 'reality_weekly_points_'.$season.'_week_'.$week, $points );
+ 			update_user_meta( $user_id, 'reality_current_points', $currentPoints );
  			
+ 			foreach( $reality->current_season as $slug => $season ) {
+ 				update_user_meta( $user_id, 'reality_weekly_points_'.$slug.'_week_'.$reality->current_week, $currentPoints );
  			}
- 		
  		}
  		
  	} else {

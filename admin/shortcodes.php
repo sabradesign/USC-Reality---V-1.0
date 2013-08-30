@@ -563,7 +563,12 @@ add_shortcode( 'reality_card', 'generate_reality_card' );
 					arsort($players);
 					foreach ($players as $player => $points)
 					{
+						
+						
 						$playerUser = new WP_User($player);
+						
+						if ( $dept && !in_array( $dept, $playerUser->roles ) ) continue;
+						
 						$output .= '<tr>';
 						$output .= '<td>'.$count.'</td>';
 						$player_info = get_userdata($playerUser->ID);

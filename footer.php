@@ -28,15 +28,15 @@
 jQuery(document).ready( function($) {
     var availableNameTags = [
       <?php foreach( $users as $user ) : ?>
-      	"<?php echo $user->display_name; ?>",
+      	'<?php echo addslashes($user->display_name); ?>',
       <?php endforeach; ?>
     ],
     	availableCardTags = [
     	<?php foreach( $cards as $card ) : ?>
     	<?php if ( !reality_is_maker_card( $card->post_name ) ) : ?>
     	{
-    		label:	"<?php echo $card->post_name; ?>",
-    		desc:	"<?php echo $card->post_title; ?>"
+    		label:	'<?php echo addslashes($card->post_name); ?>',
+    		desc:	'<?php echo addslashes($card->post_title); ?>'
     	},
     	<?php endif; ?>
     	<?php endforeach; ?>	

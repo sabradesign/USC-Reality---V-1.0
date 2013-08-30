@@ -333,8 +333,10 @@ function update_parallel_user_tax( $user_ID, $old_user_data ) {
 
 	if ( isset( $_POST['first_name'] ) && $_POST['first_name'] != '' && isset( $_POST['last_name'] ) && $_POST['last_name'] != '' ) {
 		$name = $_POST['first_name'] . ' ' . $_POST['last_name'];
-	} else {
+	} elseif ( isset($_POST['user_login']) ) {
 		$name = $_POST['user_login'];
+	} else {
+		$name = bp_core_get_username( $user_ID );
 	}
 	
 	if ( isset( $_POST['user_login'] ) ) {
